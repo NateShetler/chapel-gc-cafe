@@ -1,2 +1,2 @@
 # chapel-gc-cafe
-For The Chapel Green Campus Cafe Menu
+This repository is for The Chapel Green Campus cafe menu app.
