@@ -1,0 +1,35 @@
+/* This is the menuItem class, which will be used for a two column menu */
+.menuItem 
+{
+    float: left;
+    text-align: left;
+    padding-left: 10vw;
+    width: 35vw;
+    height: 20vh;
+}
+
+/* This is for the different subtypes of items on the menu*/
+.itemSubtype
+{
+    float: left;
+    text-align: left;
+    font-size: medium;
+    width: auto;
+    height: auto;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+
+/* This is for the whole list of menu items */
+.menuItemList 
+{
+    font-size: x-large;
+    height: 80vh;
+}
+
+/* This is for the header*/
+.header 
+{
+    font-size: xx-large;
+    text-align: center;
+}
