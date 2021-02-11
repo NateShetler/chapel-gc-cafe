@@ -1,1 +1,12 @@
-<p>admin works!</p>
+
+<div class="admin-container">
+    <h1>Admin Area</h1>
+    <ng-container *ngFor="let item of menuItems">
+        <div class="menu-item">
+            <div class="item-name">{{ item.name }}</div>
+            <div class="menu-description">{{ item.description }}</div>
+            <div class="item-price">${{ item.price }}</div>
+            <div *ngFor="let flavor of item.flavor">{{ flavor.name }}</div>
+        </div>
+    </ng-container>
+</div>

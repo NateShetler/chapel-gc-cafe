@@ -1,0 +1,16 @@
+.admin-container {
+    max-width: 80%;
+    margin: auto
+}
+
+h1 {
+    text-align: center;
+}
+
+.menu-item {
+    padding: 10px;
+    background: #7c7c7c;
+    max-width: 50%;
+    margin: 10px;
+    border-radius: 10px;
+}

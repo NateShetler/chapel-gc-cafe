@@ -7,6 +7,7 @@ import { AdminService } from '../../services/admin.service'
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+  menuItems: any = ""
 
   constructor(
     private adminService: AdminService
@@ -17,7 +18,8 @@ export class AdminComponent implements OnInit {
     this.adminService
     .getMenuItems()
     .subscribe((items) => {
-      console.log(items)
+      this.menuItems = items
+      console.log(this.menuItems)
     })
   }
 
