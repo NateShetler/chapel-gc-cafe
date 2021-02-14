@@ -1,25 +1,31 @@
-<h1>New Menu Item</h1>
+<h1>{{ title }}</h1>
         <div class="form-field">
             <mat-form-field appearance="fill">
-                <mat-label>Name</mat-label>
-                <input matInput>
+                <mat-label>name</mat-label>
+                <input value={{itemName}} matInput>
             </mat-form-field>
         </div>
         <div class="form-field">
             <mat-form-field appearance="fill">
                 <mat-label>Description</mat-label>
-                <input matInput>
+                <input value={{itemDescription}} matInput>
             </mat-form-field>
         </div>
         <div class="form-field">
             <mat-form-field appearance="fill">
                 <mat-label>Price</mat-label>
-                <input type="number" matInput>
+                <input value={{itemPrice}} type="number" matInput>
             </mat-form-field>
         </div>
         <div class="form-field">
             <h3>Flavors</h3>
-            <div><button class="flavor-add-button" mat-button>
-                <mat-icon>add</mat-icon>
-            </button></div>
+            <div class="flavors" *ngFor="let flavor of itemFlavors">{{ flavor.Name }} <fa-icon class="flavor-delete" [icon]="faTrashAlt"></fa-icon></div>
+            <div class="flavors flavor-add">
+                <a>
+                    <fa-icon [icon]="faPlus"></fa-icon>
+                </a>
+            </div>
+        </div>
+        <div class="save-button">
+            <a class="flavors change-button">Submit</a>
         </div>

@@ -10,9 +10,10 @@ h1 {
 .menu-item {
     padding: 10px;
     background: #7c7c7c;
-    max-width: 50%;
+    width: 20%;
     margin: 10px;
     border-radius: 10px;
+    /* display: block; */
 }
 
 .flavor-add-button {
@@ -23,4 +24,40 @@ h1 {
 
 .flavor-add-button mat-icon {
     transform: scale();
+}
+
+.update-button, .close-item {
+    
+    position:relative;
+    margin-top:0;
+}
+
+.update-button:hover,  .close-item:hover {
+    color: #93c841;
+}
+
+.update-button > a,  .close-item > a {
+    position: absolute;
+    margin-top: 0;
+    right: 5px;
+    font-size: 1.25em;
+}
+
+.flavors {
+    background-color: rgb(255, 255, 255, .1);
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom:10px;
+}
+
+.add-item {
+    text-align: center;
+    font-size: 2em;
+}
+
+.add-item:hover {
+    color: #93c841;
 }

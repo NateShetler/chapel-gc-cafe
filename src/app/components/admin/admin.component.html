@@ -3,19 +3,36 @@
     <h1>Admin Area</h1>
     <ng-container *ngFor="let item of menuItems">
         <div class="menu-item">
-            <div *ngIf=!edit>
-                <div class="item-name">{{ item.name }}</div> <button (click)="editItem(item.name)">edit</button>
+            <div *ngIf=!item.edit>
+                <div class="update-button">
+                    <a class="change-button" (click)="editItem(item)"><fa-icon class="" [icon]="faEdit"></fa-icon></a>
+                </div>
+                <div class="item-name">{{ item.name }}</div>
+                
                 <div class="menu-description">{{ item.description }}</div>
                 <div class="item-price">${{ item.price }}</div>
-                <div *ngFor="let flavor of item.flavors">{{ flavor.Name }}</div>
+                <h3>Flavors</h3>
+                <span class="flavors" *ngFor="let flavor of item.flavors">{{ flavor.Name }}</span>
             </div>
-            <div *ngIf=edit>
-                <app-add-item></app-add-item>
+            <div *ngIf=item.edit>
+                <div class="update-button">
+                    <a class="change-button" (click)="editItem(item)"><fa-icon class="" [icon]="faTimes"></fa-icon></a>
+                </div>
+                <app-add-item [menuItem]=item></app-add-item>
             </div>
         </div>
     </ng-container>
     <div class="menu-item">
-        <app-add-item></app-add-item>
-
+        <div *ngIf="!newItem">
+            <div (click)="addItem()" class="add-item">
+                <fa-icon [icon]="faPlus"></fa-icon>
+            </div>
+        </div>
+        <div class="new-item-box" *ngIf="newItem">
+            <div (click)="addItem()" class="close-item">
+                <a><fa-icon [icon]="faTimes"></fa-icon></a>
+            </div>
+            <app-add-item></app-add-item>
+        </div>
     </div>
 </div>

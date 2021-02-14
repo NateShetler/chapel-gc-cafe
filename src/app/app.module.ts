@@ -12,7 +12,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import { AddItemComponent } from './components/admin/add-item/add-item.component'; 
+import { AddItemComponent } from './components/admin/add-item/add-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AddItemComponent } from './components/admin/add-item/add-item.component
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FontAwesomeModule
   ],
   exports: [ 
     MatFormFieldModule, 
