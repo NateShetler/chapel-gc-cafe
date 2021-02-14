@@ -14,3 +14,13 @@ h1 {
     margin: 10px;
     border-radius: 10px;
 }
+
+.flavor-add-button {
+    background-color: #9c9c9c;
+    transform: scale(.75);
+
+}
+
+.flavor-add-button mat-icon {
+    transform: scale();
+}

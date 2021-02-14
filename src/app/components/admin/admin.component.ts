@@ -8,7 +8,12 @@ import { AdminService } from '../../services/admin.service'
 })
 export class AdminComponent implements OnInit {
   menuItems: any = ""
-
+  edit: boolean = false
+  editItem(event) {
+    console.log(event);
+    this.edit = true;
+    
+  }
   constructor(
     private adminService: AdminService
   ) { }
