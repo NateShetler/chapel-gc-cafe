@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, ObservedValueOf, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
@@ -13,5 +13,25 @@ export class AdminService {
   // Returning whatever is at api.thechapel.green/cafe-menus
   getMenuItems(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/cafe-menus`)
+  }
+  addMenuItem(req):Observable<any>{
+    return this.http.post<any>(`${this.apiUrl}/cafe-menus`, 
+    {
+      "name": req.name,
+      "description": req.description,
+      "price": req.price
+    })
+  }
+  updateMenuItem(req, menuItemId):Observable<any>{
+    console.log(req);
+    return this.http.put<any>(`${this.apiUrl}/cafe-menus/${menuItemId}`, 
+    {
+      "name": req.name,
+      "description": req.description,
+      "price": req.price
+    })
+  }
+  deleteFlavor(flavorId):Observable<any>{
+    return this.http.delete<any>(`${this.apiUrl}/flavors/${flavorId}`)
   }
 }

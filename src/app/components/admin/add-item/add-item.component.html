@@ -1,31 +1,35 @@
 <h1>{{ title }}</h1>
+<form [formGroup]="addMenuItem" (ngSubmit)="onSubmit(beingEdited)">
+    
         <div class="form-field">
             <mat-form-field appearance="fill">
                 <mat-label>name</mat-label>
-                <input value={{itemName}} matInput>
+                <input formControlName="name" matInput>
             </mat-form-field>
         </div>
         <div class="form-field">
             <mat-form-field appearance="fill">
                 <mat-label>Description</mat-label>
-                <input value={{itemDescription}} matInput>
+                <input formControlName="description" matInput>
             </mat-form-field>
         </div>
         <div class="form-field">
             <mat-form-field appearance="fill">
                 <mat-label>Price</mat-label>
-                <input value={{itemPrice}} type="number" matInput>
+                <input formControlName="price" type="number" matInput>
             </mat-form-field>
         </div>
         <div class="form-field">
             <h3>Flavors</h3>
-            <div class="flavors" *ngFor="let flavor of itemFlavors">{{ flavor.Name }} <fa-icon class="flavor-delete" [icon]="faTrashAlt"></fa-icon></div>
+            <div class="flavors" *ngFor="let flavor of itemFlavors" >{{ flavor.Name }} <fa-icon (click)="removeFlavor(flavor.id)"class="flavor-delete" [icon]="faTrashAlt"></fa-icon></div>
             <div class="flavors flavor-add">
                 <a>
                     <fa-icon [icon]="faPlus"></fa-icon>
                 </a>
             </div>
         </div>
+        
         <div class="save-button">
-            <a class="flavors change-button">Submit</a>
+            <button class="flavors change-button" type="submit">Submit</button>
         </div>
+</form>
