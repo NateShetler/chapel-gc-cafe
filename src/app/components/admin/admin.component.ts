@@ -22,14 +22,17 @@ export class AdminComponent implements OnInit {
     event[index] = event;
     
   }
-
-  addItem(){
-    this.newItem = !this.newItem;
-  }
   constructor(
     private adminService: AdminService
   ) { }
 
+  // When the Add item button is clicked, this will change the variable newItem to true which tells the template to display the form.
+  addItem(){
+    this.newItem = !this.newItem;
+  }
+ 
+
+  // This Function just refreshes the admin component without refreshing the page also sets newItem to false to hide the new item form
   refresh(){
     this.ngOnInit();
     this.newItem = false;

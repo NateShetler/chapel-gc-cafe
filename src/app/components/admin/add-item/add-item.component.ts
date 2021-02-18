@@ -14,9 +14,13 @@ export class AddItemComponent implements OnInit {
   @Input() beingEdited
   @Output() addedMenuItem = new EventEmitter<boolean>();
 
+
+  // Add Font awesome Icons
   faTrashAlt = faTrashAlt;
   faPlus = faPlus;
   faSave = faSave;
+
+  // Declare Variables to use in template
   public itemName: string;
   public itemDescription: string;
   public itemPrice: any;
@@ -37,13 +41,15 @@ export class AddItemComponent implements OnInit {
 
   });
 
+
+  // Called when user clicks to remove specific flavor
   removeFlavor(flavorId){
     this.adminService.deleteFlavor(flavorId).subscribe(() => {
       // this.addedMenuItem.emit(true);
 
     })
   }
-
+  // Called when user clicks save
   onSubmit(beingEdited): void {
     // Upon form submission check to see if its a New item or one thats being edited and make a POST or PUT request accordingly
     if(!beingEdited) {
@@ -52,7 +58,7 @@ export class AddItemComponent implements OnInit {
         this.addedMenuItem.emit(true);
       })
     }
-
+    // If beingEdited is flagged true it will call the updateMenuItem(value, ID of the menu item) Function instead of addMenuItem()
     if(beingEdited) {
       this.adminService.updateMenuItem(this.addMenuItem.value, this.menuItem.id).subscribe((res)=> {
         console.log(res)

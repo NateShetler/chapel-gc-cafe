@@ -14,6 +14,7 @@ export class AdminService {
   getMenuItems(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/cafe-menus`)
   }
+  // Send POST request to the menu with the required information
   addMenuItem(req):Observable<any>{
     return this.http.post<any>(`${this.apiUrl}/cafe-menus`, 
     {
@@ -22,6 +23,7 @@ export class AdminService {
       "price": req.price
     })
   }
+  // Send a PUT request to update any current item, Function requires the menu item id of the one thats being updated
   updateMenuItem(req, menuItemId):Observable<any>{
     console.log(req);
     return this.http.put<any>(`${this.apiUrl}/cafe-menus/${menuItemId}`, 
@@ -31,6 +33,8 @@ export class AdminService {
       "price": req.price
     })
   }
+
+  // Delete flavor, requires the flavor ID that need to be deleted
   deleteFlavor(flavorId):Observable<any>{
     return this.http.delete<any>(`${this.apiUrl}/flavors/${flavorId}`)
   }
