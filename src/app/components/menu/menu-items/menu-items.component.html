@@ -1,10 +1,9 @@
 <div>
     <div class="itemName"> 
         <p><b>{{menuItem.itemName}}</b></p>
-        <div class="flavor">
-            {{menuItem.flavors}} 
-        </div>
-    </div>
-        
+            <span *ngFor="let flavor of menuItem.flavors; let i = index">
+                <div class="flavor" >{{menuItem.flavors[i]}} </div>
+            </span>
+    </div>      
 </div>
 
