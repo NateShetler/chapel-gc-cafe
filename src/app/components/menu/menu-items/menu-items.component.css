@@ -1,0 +1,21 @@
+/* This is the menuItem class, which will be used for a two column menu */
+.itemName 
+{
+    float: left;
+    text-align: left;
+    padding-left: 10vw;
+    width: 35vw;
+    height: 20vh;
+}
+
+/* This is for the different subtypes of items on the menu*/
+.flavor
+{
+    float: left;
+    text-align: left;
+    font-size: medium;
+    width: auto;
+    height: auto;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
