@@ -1,12 +1,13 @@
 <div>
     <div class="item"> 
-        <p>
-            <b>{{menuItem.item}}</b> 
-            <span class="price"> ${{menuItem.price}} </span>
-        </p>
-            <span *ngFor="let flavor of menuItem.flavors; let i = index">
-                <div class="flavor" >{{menuItem.flavors[i]}} </div>
-            </span>
+        <div>
+            <span class="name"><b>{{menuItem.item}}</b></span>
+            <span class="price"> ${{menuItem.price}} </span>  
+            <div class="dottedLine"></div>
+        </div>
+        <span *ngFor="let flavor of menuItem.flavors; let i = index">
+            <div class="flavor" >{{menuItem.flavors[i]}} </div>
+        </span>
     </div>      
 </div>
 

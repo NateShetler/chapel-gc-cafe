@@ -4,8 +4,14 @@
     float: left;
     text-align: left;
     padding-left: 8%;
+    padding-bottom: 2%;
     width: 40%;
     height: 30%;
+}
+
+.name
+{
+    border-bottom: solid white;
 }
 
 /* This is for the different subtypes of items on the menu*/
@@ -18,10 +24,20 @@
     height: auto;
     padding-right: 10%;
     padding-bottom: 5%;
+    padding-top: 2%;
 }
 
 .price 
 {
     float: right;
     padding-right: 5%;
+    clear: both;
+    border-bottom: solid white ;
+}
+ 
+.dottedLine
+{
+    font-size: medium;
+    border-bottom: 2px dotted black;
+    width: 100%;
 }

@@ -22,42 +22,50 @@ export class MenuComponent implements OnInit {
       {
         item: "Breakfast Sandwhich",
         price: 1,
-        flavors: ["Sausage, Egg, & Cheese", "Bacon, Egg, & Cheese "]
+        flavors: ["Sausage, Egg, & Cheese", "Bacon, Egg, & Cheese "],
+        isFood: true
       },
       {
         item: "Cookie",
         price: 1,
-        flavors: ["Breakfast Cookie", "Double Chocolate", "M&M", "Chocolate Chip", "Reese's Cup", "Sugar", "Oatmeal"]
+        flavors: ["Breakfast Cookie", "Double Chocolate", "M&M", "Chocolate Chip", "Reese's Cup", "Sugar", "Oatmeal"],
+        isFood: true
       },
       {
         item: "Breakfast Burrito",
         price: 1,
-        flavors: ["Egg & Cheese"]
+        flavors: ["Egg & Cheese"],
+        isFood: true
       },
       {
         item: "Scone",
         price: 1,
-        flavors: ["Blueberry", "Cranberry"]
+        flavors: ["Blueberry", "Cranberry"],
+        isFood: true
       },
       {
         item: "Omelet",
         price: 1,
-        flavors: ["Egg, Potato, & Cheese"]
+        flavors: ["Egg, Potato, & Cheese"],
+        isFood: true
       },
       {
         item: "Muffin",
         price: 1,
-        flavors: ["Double Chocolate Chip", "Apple Pecan", "Lemon Cranberry", "Blueberry"]
+        flavors: ["Double Chocolate Chip", "Apple Pecan", "Lemon Cranberry", "Blueberry"],
+        isFood: true
       },
       {
         item: "Cheesebox",
         price: 2,
-        flavors: ["Cheese Cubes, Grapes, & Crackers"]
+        flavors: ["Cheese Cubes, Grapes, & Crackers"],
+        isFood: true
       },
       {
         item: "Donut",
         price: 1,
-        flavors: ["Glazed", "Cream Stick"]
+        flavors: ["Glazed", "Cream Stick"],
+        isFood: true
       }
     ]
   }
