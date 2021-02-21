@@ -1,0 +1,35 @@
+.flavors {
+    background-color: rgb(255, 255, 255, .1);
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom:10px; 
+}
+
+.flavor-delete {
+    font-size: .75;
+    padding: 0 5px;
+}
+
+.flavor-delete:hover {
+    color: #93c841;
+}
+
+.flavor-add {
+    padding: 5px 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.flavor-add:hover {
+    background: #93c841;
+}
+
+.save-button {
+        background: none!important;
+        border: none;
+        padding: 0!important;
+}

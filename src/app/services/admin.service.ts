@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Observable, ObservedValueOf, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
@@ -7,12 +7,17 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AdminService {
+
+
   // What if the API url changes? We only need to change it in one place
   apiUrl: string = 'https://api.thechapel.green';
   constructor(private http: HttpClient) { }
   // Returning whatever is at api.thechapel.green/cafe-menus
   getMenuItems(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/cafe-menus`)
+  }
+  getMenuItemsById(id): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/cafe-menus/${id}`)
   }
   // Send POST request to the menu with the required information
   addMenuItem(req):Observable<any>{
@@ -34,8 +39,24 @@ export class AdminService {
     })
   }
 
+  updateMenuItemFlavor(req, menuItemId):Observable<any>{
+    return this.http.put<any>(`${this.apiUrl}/cafe-menus/${menuItemId}`, 
+    {
+      "flavors": req
+    })
+  }
+
   // Delete flavor, requires the flavor ID that need to be deleted
   deleteFlavor(flavorId):Observable<any>{
     return this.http.delete<any>(`${this.apiUrl}/flavors/${flavorId}`)
   }
+
+  // Adds a flavor, Requires flavor
+  addFlavor(flavor):Observable<any>{
+    return this.http.post<any>(`${this.apiUrl}/flavors`, 
+    {
+      "Name": flavor.flavor
+    });
+  }
+
 }

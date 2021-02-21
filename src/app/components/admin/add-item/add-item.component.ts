@@ -27,7 +27,7 @@ export class AddItemComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private adminService: AdminService
+    private adminService: AdminService,
   ) { }
 
   
@@ -40,13 +40,6 @@ export class AddItemComponent implements OnInit {
   });
 
 
-  // Called when user clicks to remove specific flavor
-  removeFlavor(flavorId){
-    this.adminService.deleteFlavor(flavorId).subscribe(() => {
-      // this.addedMenuItem.emit(true);
-
-    })
-  }
   // Called when user clicks save
   onSubmit(beingEdited): void {
     // Upon form submission check to see if its a New item or one thats being edited and make a POST or PUT request accordingly

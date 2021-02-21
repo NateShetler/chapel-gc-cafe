@@ -20,7 +20,10 @@
             </mat-form-field>
         </div>
         <div class="form-field">
-            <app-item-flavor [itemFlavors]=itemFlavors></app-item-flavor>
+            <div *ngIf="menuItem"><app-item-flavor [itemFlavors]=itemFlavors [menuItemId]=menuItem.id></app-item-flavor></div>
+            <div *ngIf="menuItem == undefined"><app-item-flavor></app-item-flavor></div>
+
+            
         </div>
         
         <div class="save-button">
