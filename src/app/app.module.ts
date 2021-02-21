@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AddItemComponent } from './components/admin/add-item/add-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ItemFlavorComponent } from './components/admin/add-item/item-flavor/item-flavor.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     MenuItemsComponent,
     AdminComponent,
-    AddItemComponent
+    AddItemComponent,
+    ItemFlavorComponent
   ],
   imports: [
     BrowserModule,

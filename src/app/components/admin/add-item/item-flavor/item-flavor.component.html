@@ -1,0 +1,7 @@
+<h3>Flavors</h3>
+            <div class="flavors" *ngFor="let flavor of flavors" >{{ flavor.Name }} <fa-icon (click)="removeFlavor(flavor.id)"class="flavor-delete" [icon]="faTrashAlt"></fa-icon></div>
+            <div class="flavors flavor-add">
+                <a>
+                    <fa-icon [icon]="faPlus"></fa-icon>
+                </a>
+            </div>

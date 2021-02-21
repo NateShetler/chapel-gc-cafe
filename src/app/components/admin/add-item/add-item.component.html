@@ -20,13 +20,7 @@
             </mat-form-field>
         </div>
         <div class="form-field">
-            <h3>Flavors</h3>
-            <div class="flavors" *ngFor="let flavor of itemFlavors" >{{ flavor.Name }} <fa-icon (click)="removeFlavor(flavor.id)"class="flavor-delete" [icon]="faTrashAlt"></fa-icon></div>
-            <div class="flavors flavor-add">
-                <a>
-                    <fa-icon [icon]="faPlus"></fa-icon>
-                </a>
-            </div>
+            <app-item-flavor [itemFlavors]=itemFlavors></app-item-flavor>
         </div>
         
         <div class="save-button">

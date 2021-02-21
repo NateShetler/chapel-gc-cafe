@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 import { faPlus, faSave } from '@fortawesome/free-solid-svg-icons';
 import { AdminService } from '../../../services/admin.service';
 
@@ -11,12 +10,11 @@ import { AdminService } from '../../../services/admin.service';
 })
 export class AddItemComponent implements OnInit {
   @Input() menuItem;
-  @Input() beingEdited
+  @Input() beingEdited;
   @Output() addedMenuItem = new EventEmitter<boolean>();
 
 
   // Add Font awesome Icons
-  faTrashAlt = faTrashAlt;
   faPlus = faPlus;
   faSave = faSave;
 
