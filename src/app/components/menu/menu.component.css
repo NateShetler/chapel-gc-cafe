@@ -1,13 +1,27 @@
+:host
+{
+    display: block;
+    background-color: black;
+}
+
+.foodMenuContainer
+{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
 /* This is for the header*/
 h1
 {
     font-size: 300%;
     text-align: center;
+    color: white;
 }
 
 /* For the list of menu items */
 .itemList
 {
     font-size: x-large;
-    height: 80%;
+    height: 80%; 
 }

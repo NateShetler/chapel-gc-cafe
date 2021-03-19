@@ -65,4 +65,9 @@ export class MenuService {
     ]
     
   }
+
+  getMenuItemsFromStrapi()
+  {
+    return this.http.get<any>(`${this.menuUrl}`);
+  }
 }

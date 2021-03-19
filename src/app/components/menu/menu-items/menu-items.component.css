@@ -1,3 +1,8 @@
+.foodMenuContainer
+{
+    background-color: black;
+}
+
 /* This is the menuItem class, which will be used for a two column menu */
 .item 
 {
@@ -7,11 +12,12 @@
     padding-bottom: 2%;
     width: 40%;
     height: 30%;
+    color: white;
 }
 
 .name
 {
-    border-bottom: solid white;
+    border-bottom: solid black;
 }
 
 /* This is for the different subtypes of items on the menu*/
@@ -25,6 +31,8 @@
     padding-right: 10%;
     padding-bottom: 5%;
     padding-top: 2%;
+    color:rgb(245, 206, 135)
+
 }
 
 .price 
@@ -32,12 +40,12 @@
     float: right;
     padding-right: 5%;
     clear: both;
-    border-bottom: solid white ;
+    border-bottom: solid black ;
 }
  
 .dottedLine
 {
     font-size: medium;
-    border-bottom: 2px dotted black;
+    border-bottom: 2px dotted rgb(241, 174, 49);
     width: 100%;
 }
