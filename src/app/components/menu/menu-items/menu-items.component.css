@@ -18,6 +18,7 @@
 .name
 {
     border-bottom: solid black;
+    font-size: 150%;
 }
 
 /* This is for the different subtypes of items on the menu*/
@@ -31,7 +32,8 @@
     padding-right: 10%;
     padding-bottom: 5%;
     padding-top: 2%;
-    color:rgb(245, 206, 135)
+    color:rgb(245, 206, 135);
+    font-size: 80%;
 
 }
 
@@ -41,6 +43,7 @@
     padding-right: 5%;
     clear: both;
     border-bottom: solid black ;
+    font-size: 150%;
 }
  
 .dottedLine
